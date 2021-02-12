@@ -1,3 +1,7 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.lang.invoke.SwitchPoint;
+
 public class Tasklevel2 {
     public static class Person {
         public int age = 20;
@@ -61,8 +65,85 @@ public class Tasklevel2 {
                     }
                 }
 
+                public static void Task07() throws Exception {
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+                    int num = Integer.parseInt(reader.readLine());
+                    if (num > 0) {
+                        num = num * 2;
+                    } else if (num < 0) {
+                        num = num + 1;
+                    }
+                    System.out.println(num);
+                }
 
-                public static void main(String[] args) {
+                public static void Task08() throws Exception {
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+                    int day = Integer.parseInt(reader.readLine());
+                    switch (day) {
+                        case 1:
+                            System.out.println("понедельник");
+                            break;
+                        case 2:
+                            System.out.println("вторник");
+                            break;
+                        case 3:
+                            System.out.println("среда");
+                            break;
+                        case 4:
+                            System.out.println("четверг");
+                            break;
+                        case 5:
+                            System.out.println("пятница");
+                            break;
+                        case 6:
+                            System.out.println("суббота");
+                            break;
+                        case 7:
+                            System.out.println("воскресенье");
+                            break;
+                        default:
+                            System.out.println("такого дня недели не существует");
+                            break;
+                    }
+                }
+
+                public static void task09() throws Exception {
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+                    System.out.println("Enter two number,please ! ");
+                    int num1 = Integer.parseInt(reader.readLine());
+                    int num2 = Integer.parseInt(reader.readLine());
+                    int min = num1 < num2 ? num1 : num2;
+                    System.out.println(min);
+                }
+
+                public static void Task10() throws Exception {
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+                    String name = reader.readLine();
+                    int age = Integer.parseInt(reader.readLine());
+                    if (age < 18) {
+                        System.out.println("Подрасти еще");
+                    } else {
+                        System.out.println(name + " , Welcom!!! ");
+                    }
+                }
+                public static void task11()throws Exception{
+                    BufferedReader reader =new BufferedReader(new InputStreamReader(System.in));
+                    System.out.println("Please, enter two number :");
+                    int a = Integer.parseInt(reader.readLine());
+                    int b = Integer.parseInt(reader.readLine());
+                    if (a > 0 && b > 0) {
+                        System.out.println(1);
+                    } else if (a < 0 && b > 0) {
+                        System.out.println(2);
+                    } else if (a < 0 && b < 0) {
+                        System.out.println(3);
+                    } else if (a > 0 && b < 0) {
+                        System.out.println(4);
+                    }
+                }
+
+                public static void main(String[] args) throws Exception {
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
                     // Task 1
                     System.out.println("Task 1");
                     Person person = new Person();
@@ -99,7 +180,21 @@ public class Tasklevel2 {
                     checkInterval(10);
                     // Task 7
                     System.out.println("Task 7");
-
+                    System.out.println("Enter number");
+                    Task07();
+                    // Task 8
+                    System.out.println("Task 8");
+                    System.out.println("Enter number yo week");
+                    Task08();
+                    // Task 9
+                    System.out.println("Task 9");
+                    task09();
+                    // Task 10
+                    System.out.println("Task 10");
+                    Task10();
+                    // Task 11
+                    System.out.println("Task 11");
+                    task11();
                 }
             }
         }
