@@ -126,8 +126,9 @@ public class Tasklevel2 {
                         System.out.println(name + " , Welcom!!! ");
                     }
                 }
-                public static void task11()throws Exception{
-                    BufferedReader reader =new BufferedReader(new InputStreamReader(System.in));
+
+                public static void task11() throws Exception {
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
                     System.out.println("Please, enter two number :");
                     int a = Integer.parseInt(reader.readLine());
                     int b = Integer.parseInt(reader.readLine());
@@ -141,6 +142,85 @@ public class Tasklevel2 {
                         System.out.println(4);
                     }
                 }
+
+                public static void task12() throws Exception {
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+                    int number = Integer.parseInt(reader.readLine());
+                    if (number == 0) {
+                        System.out.println("ноль");
+                    } else if (number > 0 && number % 2 == 0) {
+                        System.out.println("положительное четное число");
+                    } else if (number > 0 && number % 2 != 0) {
+                        System.out.println("положительное нечетное число");
+                    } else if (number < 0 && number % 2 == 0) {
+                        System.out.println("отрицательное четное число");
+                    } else if (number < 0 && number % 2 != 0) {
+                        System.out.println("отрицательное нечетное число");
+                    }
+                }
+
+                public static void task13() throws Exception {
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+                    int number = Integer.parseInt(reader.readLine());
+                    if (number > 0 && number < 10 && number % 2 == 0) {
+                        System.out.println("четное однозначное число");
+                    } else if (number < 10 && number % 2 != 0) {
+                        System.out.println("нечетное однозначное число");
+                    } else if (number > 9 && number < 100 && number % 2 == 0) {
+                        System.out.println("четное двузначное число");
+                    } else if (number > 9 && number < 100 && number % 2 != 0) {
+                        System.out.println("нечетное двузначное число");
+                    } else if (number > 99 && number < 1000 && number % 2 == 0) {
+                        System.out.println("четное трехзначное число");
+                    } else if (number > 99 && number < 1000 && number % 2 != 0) {
+                        System.out.println("нечетное трехзначное число");
+                    }
+                }
+
+                public static void task14() throws Exception {
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+                    int number1 = Integer.parseInt(reader.readLine());
+                    int number2 = Integer.parseInt(reader.readLine());
+                    int number3 = Integer.parseInt(reader.readLine());
+                    int counter = 0;
+                    if (number1 > 0) {
+                        counter++;
+                    }
+                    if (number2 > 0) {
+                        counter++;
+                    }
+                    if (number3 > 0) {
+                        counter++;
+                    }
+                    System.out.println(counter);
+                }
+
+                public static void task15() throws Exception {
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+                    int number1 = Integer.parseInt(reader.readLine());
+                    int number2 = Integer.parseInt(reader.readLine());
+                    int number3 = Integer.parseInt(reader.readLine());
+                    int countPositive = 0;
+                    int countNegative = 0;
+                    if (number1 > 0) {
+                        countPositive++;
+                    } else if (number1 < 0) {
+                        countNegative++;
+                    }
+                    if (number2 > 0) {
+                        countPositive++;
+                    } else if (number2 < 0) {
+                        countNegative++;
+                    }
+                    if (number3 > 0) {
+                        countPositive++;
+                    } else if (number3 < 0) {
+                        countNegative++;
+                    }
+                    System.out.println("количество отрицательных чисел: " + countNegative);
+                    System.out.println("количество положительных чисел: " + countPositive);
+
+            }
 
                 public static void main(String[] args) throws Exception {
                     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -195,6 +275,18 @@ public class Tasklevel2 {
                     // Task 11
                     System.out.println("Task 11");
                     task11();
+                    // Task 12
+                    System.out.println("Task 12");
+                    task12();
+                    // Task 13
+                    System.out.println("Task 13");
+                    task13();
+                    // Task 14
+                    System.out.println("Task 14");
+                    task14();
+                    // Task 15
+                    System.out.println("Task 15");
+                    task15();
                 }
             }
         }
